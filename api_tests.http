@@ -1,0 +1,51 @@
+### 1. GET /api/juegos (200 OK)
+GET http://127.0.0.1:5000/api/juegos
+Accept: application/json
+
+###
+
+### 2. POST /api/juegos (201 Created)
+POST http://127.0.0.1:5000/api/juegos
+Content-Type: application/json
+
+{
+  "nombre": "Elden Ring",
+  "descripcion": "RPG de accion",
+  "precio": 1399.50
+}
+
+###
+
+### 3. GET /api/juegos/1 (200 OK)
+GET http://127.0.0.1:5000/api/juegos/1
+Accept: application/json
+
+###
+
+### 4. PUT /api/juegos/1 (200 OK)
+PUT http://127.0.0.1:5000/api/juegos/1
+Content-Type: application/json
+
+{
+  "precio": 1199.00
+}
+
+###
+
+### 5. DELETE /api/juegos/1 (204 No Content)
+DELETE http://127.0.0.1:5000/api/juegos/1
+
+###
+
+### 6. Error 404 (Recurso no encontrado)
+GET http://127.0.0.1:5000/api/juegos/999
+
+###
+
+### 7. Error 400 (Faltan datos en POST)
+POST http://127.0.0.1:5000/api/juegos
+Content-Type: application/json
+
+{
+  "nombre": "Incompleto"
+}
