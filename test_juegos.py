@@ -33,3 +33,4 @@ def test_rutas_flask(client):
     assert client.get('/').status_code == 200
     assert client.get('/test-error/400').status_code == 400
     assert client.get('/no-existe').status_code == 404
+# Verificacion de disparo automatico en GitHub Actions 
